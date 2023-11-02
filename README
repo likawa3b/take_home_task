@@ -1,0 +1,21 @@
+Please config the destination database connection details (with create table privilege granted) in 
+	1. DB_CONFIGS from dags/constants.py
+	2. sqlalchemy.url from alembic.ini
+
+You can config the task fail alert email in
+	1. default_args['email'] from dags/task_2_dag.py
+	2. 	AIRFLOW__SMTP__SMTP_HOST
+		AIRFLOW__SMTP__SMTP_MAIL_FROM
+		AIRFLOW__SMTP__SMTP_USER
+		AIRFLOW__SMTP__SMTP_PASSWORD
+		AIRFLOW__SMTP__SMTP_PORT
+		AIRFLOW__SMTP__SMTP_SS
+		AIRFLOW__SMTP__SMTP_STARTTLS
+		from docker-compose.yaml
+
+You can config the slack alert in:
+	1. SLACK_BOT_TOKEN, SLACK_CHANNEL_ID from dags/constants.py
+
+
+Run deploy.cmd or deploy.sh for Pipline Deployment.
+Access http://localhost:8080/login/ and login to Airflow UI with username:airflow, password:airflow

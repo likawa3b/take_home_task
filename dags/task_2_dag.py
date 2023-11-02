@@ -35,7 +35,7 @@ user_defined_filters={
 	'localtz': localize_utc_tz,
 	}
 
-@dag(dag_id='ingest_api', start_date=days_ago(1), schedule='00 08 * * *', catchup=True, max_active_tasks=6, max_active_runs=1, default_args=default_args,user_defined_filters=user_defined_filters)		
+@dag(dag_id='ingest_api', start_date=days_ago(1), schedule='00 12 * * *', catchup=True, max_active_tasks=6, max_active_runs=1, default_args=default_args,user_defined_filters=user_defined_filters)		
 def ingest_api():
 
 	SQLM = SqlModuler()

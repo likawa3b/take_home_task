@@ -19,3 +19,5 @@ You can config the slack alert in:
 
 Run deploy.cmd or deploy.sh for Pipline Deployment.
 Access http://localhost:8080/login/ and login to Airflow UI with username:airflow, password:airflow
+Kick start the ingest_api DAG by clicking the "Trigger DAG" play button.  
+The DAG is also scheduled to run daily at 8:00 AM EDT
